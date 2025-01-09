@@ -24,3 +24,16 @@ export enum ChatTypesEnum {
   DIRECT = 'DIRECT',
   GROUP = 'GROUP',
 }
+
+export interface Message {
+  id: number
+  content: string
+  timestamp: Date
+  type: MessageType
+  author: ExternalUser
+}
+
+export enum MessageType {
+  TEXT,
+  IMAGE
+}
