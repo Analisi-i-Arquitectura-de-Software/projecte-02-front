@@ -20,7 +20,7 @@ export interface ExternalUser {
   username: string
 }
 
-export enum ChatTypesEnum {
+export enum ChatType {
   DIRECT = 'DIRECT',
   GROUP = 'GROUP',
 }
@@ -34,6 +34,6 @@ export interface Message {
 }
 
 export enum MessageType {
-  TEXT,
-  IMAGE
+  TEXT = 'TEXT',
+  IMAGE = 'IMAGE',
 }

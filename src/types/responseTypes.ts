@@ -1,4 +1,4 @@
-import { ExternalUser, UserChat } from './models'
+import { ExternalUser, Message, UserChat } from './models'
 
 export type AuthResponseType = {
   data: {
@@ -25,3 +25,14 @@ export type CreateChatResponseType = {
   } | null
   errorMessage: string | null
 }
+
+export type MessageResponseType = {
+  data: Message[] | null
+  errorMessage: string | null
+}
+
+export type CreateMessageResponseType = {
+  message: Message | null
+  errorMessage: string | null
+}
+

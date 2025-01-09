@@ -1,7 +1,12 @@
-import { ChatTypesEnum } from './models'
+import { ChatType, MessageType } from './models'
 
 export type CreateChatRequestType = {
   name?: string
   userIds: number[]
-  type: ChatTypesEnum
+  type: ChatType
+}
+
+export type CreateMessageRequestType = {
+  content: string
+  type: MessageType
 }
