@@ -1,0 +1,54 @@
+.message {
+    display: flex;
+    margin: 10px 0;
+  }
+  
+  .message.sent {
+    justify-content: flex-end; /* Messages sent by the user are aligned to the right */
+  }
+  
+  .message.received {
+    justify-content: flex-start; /* Messages received are aligned to the left */
+  }
+  
+  .message-box {
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  
+  .message.sent .message-box {
+    background-color: #d1e7dd; /* Light green for sent messages */
+    color: #155724;
+  }
+  
+  .message.received .message-box {
+    background-color: #e2e3e5; /* Light gray for received messages */
+    color: #495057;
+  }
+  
+  /* Username styling */
+.message-header {
+  font-size: 16px; /* Make the username font larger */
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000; /* Darker text for better visibility */
+}
+
+/* Timestamp styling */
+.message-footer {
+  font-size: 12px; /* Smaller font for the timestamp */
+  color: #fff; /* White color for the timestamp */
+  text-align: right;
+  position: relative;
+  bottom: 5%; /* Position at the bottom of the message */
+  right: 5%; /* Slightly inside the box */
+}
+
+.message-content {
+  padding: 5%; /* Add padding inside the message box */
+}

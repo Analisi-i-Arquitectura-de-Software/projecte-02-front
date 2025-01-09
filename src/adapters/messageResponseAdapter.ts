@@ -35,14 +35,14 @@ export const createMessageResponseAdapter = async (
   // Verificar si la respuesta tiene los datos esperados
   if (response.ok) {
     return {
-      message: responseData.message,
+      data: responseData.data,
       errorMessage: null,
     }
   }
 
   // Si no es una respuesta correcta, manejar el error
   return {
-    message: null,
+    data: {message: null},
     errorMessage: responseData.errorMessage || 'Unknown error',
   }
 }

@@ -1,38 +1,23 @@
-import { MainFrame } from '@/components/containers/MainFrame'
-import { Box, Typography } from '@mui/material'
-import { useParams } from 'react-router-dom'
+import { MainFrame } from "@/components/containers/MainFrame";
+import { Box, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { Chat } from "./components/chat/Chat";
 
 export const ChatPage = () => {
-  const { chatId } = useParams<{ chatId: string }>()
+  const { chatId } = useParams<{ chatId: string }>();
 
   return (
     <MainFrame>
       <Box sx={containerStyle} className="smooth-pattern" component="main">
-        {/* Temporal */}
-        <Typography variant="h4" sx={typographyStyle}>
-          Chat page
-        </Typography>
-        <Typography variant="body1" sx={{ color: 'var(--color-gray)' }}>
-          Chat ID: {chatId}
-        </Typography>
+        <Chat chatId={Number(chatId)}></Chat>
       </Box>
     </MainFrame>
-  )
-}
+  );
+};
 
 const containerStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '100%',
-  flexDirection: 'column',
-  textAlign: 'center',
+  display: "flex",
+  height: "100%",
+  flexDirection: "column",
   flexGrow: 1,
-  padding: 2,
-}
-
-const typographyStyle = {
-  fontWeight: 'bold',
-  marginBottom: 2,
-  color: 'var(--color-dark-gray)',
-}
+};
