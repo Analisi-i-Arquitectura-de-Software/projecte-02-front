@@ -132,4 +132,5 @@ const containerStyle = {
   flexGrow: 1,
   padding: 2,
   backgroundColor: 'var(--color-light-gray)',
+  overflow: 'auto',
 }

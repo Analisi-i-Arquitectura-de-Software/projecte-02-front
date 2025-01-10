@@ -41,7 +41,7 @@ export const ParticipantList: React.FC<ParticipantListProps> = ({
       >
         Participants
       </Typography>
-      <Box sx={listContainerStyle} component="ul">
+      <Box sx={listContainerStyle} component="ul" className="scrollbar-custom">
         {participantContent}
       </Box>
     </Box>
@@ -56,6 +56,7 @@ const containerStyle = {
   flexDirection: 'column',
   textAlign: 'center',
   gap: 2,
+  overflow: 'auto',
 }
 
 const listContainerStyle = {
